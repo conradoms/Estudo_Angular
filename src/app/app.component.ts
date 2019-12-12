@@ -1,3 +1,4 @@
+import { PhotoService } from './photos/photo/photo.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,16 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "Tesla";
+  photos: Object[] = [];
 
-  photos = [
-    {
-        url: 'https://photos7.motorcar.com/used-2016-tesla-model_s-teslamodels20165p90d-13542-18401809-28-1024.jpg',
-        description: 'Model S'
-    },
-    {
-        url: 'https://www.designboom.com/wp-content/uploads/2019/11/tesla-cybertruck-bulletproof-exoskeleton-designboom-6.jpg',
-        description: 'Cybertruck'
-    }
-  ]
+  constructor(photoService: PhotoService){
+    photoService.listFromUser("flavio")
+      .subscribe(photo => this.photos = photo);
+  }
+  
 }
