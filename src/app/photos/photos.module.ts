@@ -7,5 +7,4 @@ import { PhotoComponent } from './photo/photo.component';
     exports: [ PhotoComponent ]
 })
 export class PhotosModule{
-
 }

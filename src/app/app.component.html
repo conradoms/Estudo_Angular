@@ -1,2 +1,4 @@
-<ap-photo description='Cybertruck' url='https://www.designboom.com/wp-content/uploads/2019/11/tesla-cybertruck-bulletproof-exoskeleton-designboom-6.jpg'></ap-photo>
-<ap-photo description='Model 3' url='https://photos7.motorcar.com/used-2016-tesla-model_s-teslamodels20165p90d-13542-18401809-28-1024.jpg'></ap-photo>
+<ap-photo
+  *ngFor="let photo of photos"
+  [url]='photo.url' 
+  [description]='photo.description'></ap-photo>
