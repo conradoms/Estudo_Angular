@@ -23,7 +23,6 @@ export class PhotoListComponent implements OnInit {
     const userName = this.activatedRoute.snapshot.params.userName;
     this.photoService.listFromUser(userName)
       .subscribe(photo => {
-        console.log(photo[0].description)
         this.photos = photo
       });
     
