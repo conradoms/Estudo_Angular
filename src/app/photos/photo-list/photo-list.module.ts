@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { CardModule } from './../../shared/components/card/card.module';
 import { PhotoModule } from './../photo/photo.module';
-import { PhotoListResolver } from './photo-list.resolver';
 import { FilterByDescription } from './filter-by-description.pipe';
 import { LoadButtonComponent } from './load-button/load-button.component';
 import { PhotosComponent } from './photos/photos.component';
@@ -17,7 +17,8 @@ import { PhotoListComponent } from './photo-list.component';
     ],
     imports: [
         CommonModule,
-        PhotoModule
+        PhotoModule,
+        CardModule
     ]
 })
 export class PhotoListModule{}
